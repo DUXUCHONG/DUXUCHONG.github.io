@@ -1,0 +1,69 @@
+## 个人主页 + 博客（GitHub Pages / Jekyll）
+
+本项目是一个可直接部署到 GitHub Pages 的 **个人主页 + 博客** 模板（Jekyll + minima 主题）。
+
+> 说明：本仓库里的模板内容包含 `AI Generated` 标记，便于后续你替换成自己的内容。
+
+### 目录结构
+
+```text
+.
+├─ _config.yml              # 站点配置
+├─ index.md                 # 首页
+├─ blog.md                  # 博客列表页
+├─ about.md                 # 关于页
+├─ 404.md
+├─ _posts/                  # 博文目录（文件名必须 YYYY-MM-DD-title.md）
+├─ assets/main.scss         # 样式入口（GitHub Pages 会自动编译）
+└─ _sass/custom.scss        # 自定义样式
+```
+
+### 部署方式 A（推荐）：用户主页仓库
+
+1. 在 GitHub 新建仓库：`<你的用户名>.github.io`
+2. 把本目录下所有文件推到该仓库的 `main` 分支根目录
+3. 打开仓库：**Settings → Pages**
+4. **Build and deployment**
+   - Source：`Deploy from a branch`
+   - Branch：`main`
+   - Folder：`/ (root)`
+5. 等 1–3 分钟，访问：`https://<你的用户名>.github.io/`
+
+### 部署方式 B：项目主页（`/<repo>/`）
+
+如果你的仓库叫 `my-blog`，访问路径是 `https://<username>.github.io/my-blog/`，你需要：
+
+1. 在 `_config.yml` 把：
+   - `baseurl` 改成 `"/my-blog"`
+   - `url` 改成 `"https://<username>.github.io"`
+2. GitHub Pages 选择从 `main` 分支部署（同上）
+
+### 写博客
+
+在 `_posts/` 新建 Markdown 文件，文件名格式：
+
+`YYYY-MM-DD-title.md`
+
+示例：`2026-02-04-hello-world.md`
+
+### 自定义导航
+
+导航由 `_config.yml` 的 `header_pages` 决定：
+
+```yml
+header_pages:
+  - index.md
+  - blog.md
+  - about.md
+```
+
+### 本地预览（可选）
+
+如果你电脑已经装好了 Ruby + Jekyll，可以在仓库根目录运行：
+
+```bash
+jekyll serve
+```
+
+没有 Ruby 环境也没关系：直接推到 GitHub Pages 也能构建与发布。
+

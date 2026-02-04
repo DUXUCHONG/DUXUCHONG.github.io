@@ -1,0 +1,30 @@
+## AI Generated: initial Jekyll config for GitHub Pages
+title: "DUXUCHONG"
+email: "you@example.com"
+description: "这里是我的个人主页与博客。"
+
+# User/Org site: keep baseurl empty. Project site: set baseurl: "/repo-name"
+baseurl: ""
+url: "https://duxuchong.github.io"
+
+theme: minima
+minima:
+  skin: auto
+
+header_pages:
+  - index.md
+  - blog.md
+  - about.md
+
+show_excerpts: true
+
+plugins:
+  - jekyll-feed
+
+author:
+  name: "DUXUCHONG"
+
+social_links:
+  - platform: github
+    user_url: "https://github.com/DUXUCHONG"
+
