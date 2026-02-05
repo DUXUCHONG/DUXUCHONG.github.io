@@ -8,23 +8,33 @@ permalink: /about/
 
 <!-- AI Generated: bilingual about page (single site, client-side toggle) -->
 
-<div class="content-zh" lang="zh-Hans">
-  ## 我是谁
+<div class="content-zh" lang="zh-Hans" markdown="1">
 
-  - 位置 / 方向 / 兴趣（把这里替换成你的真实信息）
+## 我是谁
 
-  ## 我在做什么
+- **工作**：AI Agent 研发
+- **学历**：德国本科，美国硕士（计算机专业）
+- **位置**：家乡重庆，目前上海
 
-  - 项目 / 学习 / 作品集链接（可写 GitHub、简历、Notion 等）
+## 我在做什么
+
+- 专注于把 AI Agent 能力落到可用、可迭代的产品与工程系统中（规划、工具调用、评测与质量控制等）。
+- **未来梦想**：让 AI 优化未来的社会机制。
+
 </div>
 
-<div class="content-en" lang="en">
-  ## Who I am
+<div class="content-en" lang="en" markdown="1">
 
-  - Location / focus / interests (replace with your real info)
+## Who I am
 
-  ## What I'm working on
+- **Work**: AI Agent R&D
+- **Education**: B.S. in Germany, M.S. in the U.S. (Computer Science)
+- **Location**: From Chongqing, currently based in Shanghai
 
-  - Projects / learning / portfolio links (GitHub, resume, Notion, etc.)
+## What I'm working on
+
+- Building practical, iterative AI agent systems (planning, tool use, evaluation, and quality control).
+- **Long-term vision**: Use AI to improve the social mechanisms of the future.
+
 </div>
 
