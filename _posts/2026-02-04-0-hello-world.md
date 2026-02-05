@@ -9,14 +9,14 @@ ref: hello-world
 
 <!-- AI Generated: bilingual post content (single site, client-side toggle) -->
 
-<div class="zh" lang="zh-Hans">
+<div class="content-zh" lang="zh-Hans">
   这是我的第一篇博客。
 
   - 用 Markdown 写作
   - 推送到 GitHub 后会自动发布
 </div>
 
-<div class="en" lang="en">
+<div class="content-en" lang="en">
   This is my first blog post.
 
   - Write with Markdown

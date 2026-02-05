@@ -15,18 +15,18 @@
 
 /* AI Generated: i18n toggling (no plugin)
  * - JS sets: html[data-lang="zh"] or html[data-lang="en"]
- * - Content blocks: .zh and .en
+ * - Content blocks: .content-zh and .content-en
  */
-html[data-lang="zh"] .en {
+html[data-lang="zh"] .content-en {
   display: none;
 }
 
-html[data-lang="en"] .zh {
+html[data-lang="en"] .content-zh {
   display: none;
 }
 
 /* Default to Chinese before JS runs */
-html:not([data-lang]) .en {
+html:not([data-lang]) .content-en {
   display: none;
 }
 
