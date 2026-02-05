@@ -8,8 +8,10 @@ permalink: /blog/
 
 <!-- AI Generated: bilingual blog index (filtered by front matter lang) -->
 
+{% assign posts_count = site.posts | size %}
+
 <div class="content-zh" lang="zh-Hans">
-  这里是我的文章：
+  这里是我的文章（共 {{ posts_count }} 篇）：
 
   <ul>
     {% for post in site.posts %}
@@ -23,7 +25,7 @@ permalink: /blog/
 </div>
 
 <div class="content-en" lang="en">
-  All posts:
+  All posts (total {{ posts_count }}):
 
   <ul>
     {% for post in site.posts %}
