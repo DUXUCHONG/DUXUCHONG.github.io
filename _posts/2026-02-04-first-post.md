@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "第二篇：我的站点是怎么搭的"
-title_zh: "第二篇：我的站点是怎么搭的"
-title_en: "Post 2: How I built this site"
+title: "第一篇：我的站点是怎么搭的"
+title_zh: "第一篇：我的站点是怎么搭的"
+title_en: "Post 1: How I built this site"
 date: 2026-02-04
-categories: [技术]
-lang: zh
+order: 20
+categories: [tech]
 ref: how-this-site-is-built
 ---
 

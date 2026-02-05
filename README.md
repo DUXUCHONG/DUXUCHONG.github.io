@@ -46,6 +46,14 @@
 
 示例：`2026-02-04-hello-world.md`
 
+你可以在文章的 front matter 里添加 `order` 来控制在 `blog` 列表页的展示顺序：
+
+```yml
+order: 20 # 数字越大越靠前（优先级高于时间）
+```
+
+如果 `order` 相同（尽量避免），则按 `date` 从新到旧排序；未设置 `order` 的文章也默认按时间排序。
+
 ### 自定义导航
 
 导航由 `_config.yml` 的 `header_pages` 决定：
