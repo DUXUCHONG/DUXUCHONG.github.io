@@ -13,3 +13,45 @@
   letter-spacing: 0.2px;
 }
 
+/* AI Generated: i18n toggling (no plugin)
+ * - JS sets: html[data-lang="zh"] or html[data-lang="en"]
+ * - Content blocks: .i18n.i18n-zh and .i18n.i18n-en
+ */
+html[data-lang="zh"] .i18n-en {
+  display: none;
+}
+
+html[data-lang="en"] .i18n-zh {
+  display: none;
+}
+
+/* Default to Chinese before JS runs */
+html:not([data-lang]) .i18n-en {
+  display: none;
+}
+
+/* Floating toggle button */
+.lang-toggle-btn {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 9999;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  background: rgba(255, 255, 255, 0.95);
+  color: #111;
+  cursor: pointer;
+  line-height: 1.1;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.lang-toggle-btn:hover {
+  border-color: rgba(0, 0, 0, 0.35);
+}
+
+.lang-toggle-btn:focus {
+  outline: 3px solid rgba(0, 118, 255, 0.35);
+  outline-offset: 2px;
+}
+
