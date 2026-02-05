@@ -21,6 +21,27 @@ show_excerpts: true
 plugins:
   - jekyll-feed
 
+# AI Generated: comments (giscus + GitHub Discussions)
+# Note: This repo currently has `has_discussions: false` on GitHub.
+# Enable Discussions in the repo settings, then set `category` / `category_id`
+# (use giscus' generator to obtain the IDs).
+comments:
+  provider: giscus
+  giscus:
+    repo: "DUXUCHONG/DUXUCHONG.github.io"
+    repo_id: "R_kgDORILIkg"
+    # Set these after enabling Discussions and creating a category (e.g. "Comments")
+    category: ""
+    category_id: ""
+    mapping: "pathname"
+    strict: "0"
+    reactions_enabled: "1"
+    emit_metadata: "0"
+    input_position: "bottom"
+    theme: "preferred_color_scheme"
+    lang: "zh-CN"
+    loading: "lazy"
+
 author:
   name: "DUXUCHONG"
 

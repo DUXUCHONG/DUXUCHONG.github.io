@@ -1,0 +1,35 @@
+{%- comment -%}
+AI Generated: giscus comments embed (GitHub Discussions)
+
+This include is intended to be used from `layout: post` only.
+It is guarded so it won't render until required keys are configured.
+{%- endcomment -%}
+
+{%- assign comments = site.comments -%}
+{%- assign g = site.comments.giscus -%}
+
+{%- if comments and comments.provider == "giscus"
+  and g and g.repo and g.repo_id and g.category and g.category_id -%}
+  <div class="comments">
+    <script
+      src="https://giscus.app/client.js"
+      data-repo="{{ g.repo }}"
+      data-repo-id="{{ g.repo_id }}"
+      data-category="{{ g.category }}"
+      data-category-id="{{ g.category_id }}"
+      data-mapping="{{ g.mapping | default: 'pathname' }}"
+      data-strict="{{ g.strict | default: '0' }}"
+      data-reactions-enabled="{{ g.reactions_enabled | default: '1' }}"
+      data-emit-metadata="{{ g.emit_metadata | default: '0' }}"
+      data-input-position="{{ g.input_position | default: 'bottom' }}"
+      data-theme="{{ g.theme | default: 'preferred_color_scheme' }}"
+      data-lang="{{ g.lang | default: 'zh-CN' }}"
+      data-loading="{{ g.loading | default: 'lazy' }}"
+      crossorigin="anonymous"
+      async>
+    </script>
+  </div>
+{%- else -%}
+  <!-- giscus is not configured yet: set site.comments.giscus.category/category_id in _config.yml -->
+{%- endif -%}
+
