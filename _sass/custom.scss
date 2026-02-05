@@ -62,6 +62,10 @@ html:not([data-lang]) .content-en {
   border-top: 1px solid rgba(0, 0, 0, 0.12);
 }
 
+.post-meta-extra {
+  display: inline;
+}
+
 @media (prefers-color-scheme: dark) {
   .comments {
     border-top-color: rgba(255, 255, 255, 0.12);

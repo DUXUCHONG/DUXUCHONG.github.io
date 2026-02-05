@@ -22,7 +22,10 @@ permalink: /blog/
       {% for post in posts_in_group %}
         <li>
           <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          <small>（{{ post.date | date: "%Y-%m-%d" }}）</small>
+          {% assign post_order = post.order | default: "?" %}
+          {% assign post_type = post.categories | join: ", " %}
+          {% if post_type == "" %}{% assign post_type = "uncategorized" %}{% endif %}
+          <small>( No.{{ post_order }} | {{ post_type }} | {{ post.date | date: "%Y-%m-%d" }} )</small>
           {% if post.excerpt %}<div>{{ post.excerpt }}</div>{% endif %}
         </li>
       {% endfor %}
@@ -30,7 +33,10 @@ permalink: /blog/
     {% for post in unordered_posts %}
       <li>
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <small>（{{ post.date | date: "%Y-%m-%d" }}）</small>
+        {% assign post_order = post.order | default: "?" %}
+        {% assign post_type = post.categories | join: ", " %}
+        {% if post_type == "" %}{% assign post_type = "uncategorized" %}{% endif %}
+        <small>( No.{{ post_order }} | {{ post_type }} | {{ post.date | date: "%Y-%m-%d" }} )</small>
         {% if post.excerpt %}<div>{{ post.excerpt }}</div>{% endif %}
       </li>
     {% endfor %}
@@ -46,7 +52,10 @@ permalink: /blog/
       {% for post in posts_in_group %}
         <li>
           <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          <small>({{ post.date | date: "%Y-%m-%d" }})</small>
+          {% assign post_order = post.order | default: "?" %}
+          {% assign post_type = post.categories | join: ", " %}
+          {% if post_type == "" %}{% assign post_type = "uncategorized" %}{% endif %}
+          <small>( No.{{ post_order }} | {{ post_type }} | {{ post.date | date: "%Y-%m-%d" }} )</small>
           {% if post.excerpt %}<div>{{ post.excerpt }}</div>{% endif %}
         </li>
       {% endfor %}
@@ -54,7 +63,10 @@ permalink: /blog/
     {% for post in unordered_posts %}
       <li>
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <small>({{ post.date | date: "%Y-%m-%d" }})</small>
+        {% assign post_order = post.order | default: "?" %}
+        {% assign post_type = post.categories | join: ", " %}
+        {% if post_type == "" %}{% assign post_type = "uncategorized" %}{% endif %}
+        <small>( No.{{ post_order }} | {{ post_type }} | {{ post.date | date: "%Y-%m-%d" }} )</small>
         {% if post.excerpt %}<div>{{ post.excerpt }}</div>{% endif %}
       </li>
     {% endfor %}

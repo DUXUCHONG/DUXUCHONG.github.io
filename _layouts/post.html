@@ -11,6 +11,10 @@ layout: default
       <span class="content-en" lang="en">{{ page.title_en | default: page.title | escape }}</span>
     </h1>
     <p class="post-meta">
+      {% assign page_order = page.order | default: "?" %}
+      {% assign page_type = page.categories | join: ", " %}
+      {% if page_type == "" %}{% assign page_type = "uncategorized" %}{% endif %}
+      <span class="post-meta-extra">Blog No. {{ page_order }} | type : {{ page_type }} | </span>
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {{ page.date | date: "%Y-%m-%d" }}
       </time>
