@@ -1,8 +1,6 @@
 ---
 layout: page
-title: Blog
-title_zh: 博客
-title_en: Blog
+title: Blog / 博客
 nav_zh: 博客
 nav_en: Blog
 permalink: /blog/
@@ -10,13 +8,13 @@ permalink: /blog/
 
 <!-- AI Generated: bilingual blog index (filtered by front matter lang) -->
 
-<div class="zh" lang="zh-Hans">
+<div class="i18n i18n-zh" lang="zh-Hans">
   这里是我的文章：
 
   <ul>
     {% for post in site.posts %}
       <li>
-        <a href="{{ post.url | relative_url }}">{{ post.title_zh | default: post.title }}</a>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
         <small>（{{ post.date | date: "%Y-%m-%d" }}）</small>
         {% if post.excerpt %}<div>{{ post.excerpt }}</div>{% endif %}
       </li>
@@ -24,13 +22,13 @@ permalink: /blog/
   </ul>
 </div>
 
-<div class="en" lang="en">
+<div class="i18n i18n-en" lang="en">
   All posts:
 
   <ul>
     {% for post in site.posts %}
       <li>
-        <a href="{{ post.url | relative_url }}">{{ post.title_en | default: post.title }}</a>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
         <small>({{ post.date | date: "%Y-%m-%d" }})</small>
         {% if post.excerpt %}<div>{{ post.excerpt }}</div>{% endif %}
       </li>

@@ -1,7 +1,7 @@
 /* AI Generated: simple client-side i18n toggle (no plugins)
  * - Stores preference in localStorage
  * - Supports ?lang=zh|en override
- * - Toggles visibility of .zh and .en blocks (see _sass/custom.scss)
+ * - Toggles visibility of .i18n-zh and .i18n-en blocks (see _sass/custom.scss)
  */
 
 (function () {
