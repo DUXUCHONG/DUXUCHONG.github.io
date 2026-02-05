@@ -1,6 +1,8 @@
 ---
 layout: home
 title: Home / 首页
+nav_zh: 首页
+nav_en: Home
 ---
 
 <!-- AI Generated: bilingual homepage content (single site, client-side toggle) -->

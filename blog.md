@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Blog / 博客
+nav_zh: 博客
+nav_en: Blog
 permalink: /blog/
 ---
 
