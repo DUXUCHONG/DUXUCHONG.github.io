@@ -8,7 +8,7 @@ permalink: /blog/
 
 <!-- AI Generated: bilingual blog index (filtered by front matter lang) -->
 
-<div class="i18n i18n-zh" lang="zh-Hans">
+<div class="zh" lang="zh-Hans">
   这里是我的文章：
 
   <ul>
@@ -22,7 +22,7 @@ permalink: /blog/
   </ul>
 </div>
 
-<div class="i18n i18n-en" lang="en">
+<div class="en" lang="en">
   All posts:
 
   <ul>

@@ -7,7 +7,7 @@ nav_en: Home
 
 <!-- AI Generated: bilingual homepage content (single site, client-side toggle) -->
 
-<div class="i18n i18n-zh" lang="zh-Hans">
+<div class="zh" lang="zh-Hans">
   你好，我是 杜旭冲（Daniel Du)。
 
   - 一句话简介：AI 探索者，足球爱好者
@@ -16,7 +16,7 @@ nav_en: Home
   - 联系方式：you@example.com
 </div>
 
-<div class="i18n i18n-en" lang="en">
+<div class="en" lang="en">
   Hi, I'm Daniel Du.
 
   - One-liner: AI explorer, football fan
