@@ -1,6 +1,6 @@
 <!-- AI Generated: override minima header to support bilingual nav labels
-     - Uses per-page front matter: nav_zh / nav_en (fallback to title)
-     - Actual visibility is controlled by html[data-lang] + .i18n CSS
+     - Uses per-page front matter: title_zh / title_en (fallback to title)
+     - Actual visibility is controlled by html[data-lang] + .content-* CSS
 -->
 
 <header class="site-header" role="banner">
@@ -31,10 +31,10 @@
             {%- if my_page and my_page.url -%}
               <a class="page-link" href="{{ my_page.url | relative_url }}">
                 <span class="content-zh" lang="zh-Hans">
-                  {{ my_page.nav_zh | default: my_page.title | default: path | escape }}
+                  {{ my_page.title_zh | default: my_page.title | default: path | escape }}
                 </span>
                 <span class="content-en" lang="en">
-                  {{ my_page.nav_en | default: my_page.title | default: path | escape }}
+                  {{ my_page.title_en | default: my_page.title | default: path | escape }}
                 </span>
               </a>
             {%- endif -%}

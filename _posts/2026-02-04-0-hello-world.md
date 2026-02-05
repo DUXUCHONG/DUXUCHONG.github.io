@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Hello World"
+title_zh: "你好，世界"
+title_en: "Hello World"
 date: 2026-02-04
 categories: [随笔]
 lang: zh

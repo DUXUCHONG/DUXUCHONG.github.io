@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<!-- AI Generated: override minima home layout to render bilingual titles -->
+
+<div class="home">
+  {%- if page.title or page.title_zh or page.title_en -%}
+    <h1 class="page-heading">
+      <span class="content-zh" lang="zh-Hans">{{ page.title_zh | default: page.title | escape }}</span>
+      <span class="content-en" lang="en">{{ page.title_en | default: page.title | escape }}</span>
+    </h1>
+  {%- endif -%}
+
+  {{ content }}
+</div>
+
