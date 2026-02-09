@@ -14,6 +14,7 @@
 ├─ about.md                 # 关于页
 ├─ 404.md
 ├─ _posts/                  # 博文目录（文件名必须 YYYY-MM-DD-title.md）
+├─ assets/img/posts/        # 图片（按 post 的 ref 分目录管理）
 ├─ assets/main.scss         # 样式入口（GitHub Pages 会自动编译）
 └─ _sass/custom.scss        # 自定义样式
 ```
@@ -53,6 +54,35 @@ order: 0 # 数字越大越靠前（优先级高于时间）
 ```
 
 如果 `order` 相同（尽量避免），则按 `date` 从新到旧排序；未设置 `order` 的文章也默认按时间排序。
+
+### 图片管理（推荐：按文章 `ref` 分目录）
+
+为了简化管理（尤其是**文章增删**时的图片清理），约定：
+
+- **ref 必须唯一且稳定**：每篇文章 front matter 里都有 `ref:`，建议用短英文/slug（只含小写字母、数字、`-`），例如：
+
+```yml
+ref: how-this-site-is-built
+```
+
+- **图片目录固定**：把该文章用到的图片全部放到：
+  - `assets/img/posts/<ref>/`
+
+示例：
+
+```text
+assets/img/posts/how-this-site-is-built/arch.png
+assets/img/posts/how-this-site-is-built/demo-1.webp
+```
+
+- **引用方式（兼容 baseurl）**：在 Markdown 里用 `relative_url`，避免从“用户主页站点”切换到“项目站点（带 /repo/）”时图片挂掉：
+
+```md
+![图注]({{ "/assets/img/posts/" | append: page.ref | append: "/arch.png" | relative_url }})
+```
+
+- **删除文章时怎么处理**：
+  - 删除 `_posts/...md` 的同时，**一起删除** `assets/img/posts/<ref>/` 这个文件夹即可（不会误删其它文章图片，也不会留下“孤儿图片”）。
 
 ### 自定义导航
 
